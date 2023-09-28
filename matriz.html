@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matriz 10x10</title>
+    <style>
+        /* Estilo para la tabla */
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        /* Estilo para las celdas */
+        td {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <!-- JavaScript generará las filas y columnas de la matriz -->
+    </table>
+
+    <script>
+        // Función para crear y mostrar la matriz
+        function crearMatriz(filas, columnas) {
+            var tabla = document.querySelector('table');
+
+            for (var i = 0; i < filas; i++) {
+                var fila = document.createElement('tr');
+                for (var j = 0; j < columnas; j++) {
+                    var celda = document.createElement('td');
+                    celda.textContent = (i * columnas + j + 1).toString();
+                    fila.appendChild(celda);
+                }
+                tabla.appendChild(fila);
+            }
+        }
+
+        // Llamar a la función para crear la matriz 10x10
+        crearMatriz(10, 10);
+    </script>
+</body>
+</html>
