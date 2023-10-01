@@ -44,17 +44,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 todo.push(numero - 1);
             }
         }
-
-        // Genera 3 números enteros al azar entre 1 y 100
-        var numerosAlAzar = []; // Crear un arreglo para almacenar los números al azar
-        for (var i = 0; i < 3; i++) {
-            var numeroAlAzar = Math.floor(Math.random() * 100) + 1;
-            numerosAlAzar.push(numeroAlAzar); // Agregar el número al azar al arreglo
-        }
-
-        // Mostrar los arreglos en la lista HTML "todo"
-        mostrarEnLista(todo, "todo");
-
         // Llamar a la función para crear la matriz 10x10 y colorear los valores
         crearMatriz(10, 10, todo);
     }
